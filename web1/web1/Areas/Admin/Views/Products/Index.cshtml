@@ -1,0 +1,40 @@
+﻿@model web1.Areas.Admin.ViewModels.Products.IndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Products) {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            @*<td>@item.ImageURL</td>*@
+            <td>-</td>
+            <td>
+                @*<a asp-area="Admin" asp-controller="Products" asp-action="Edit" asp-route-id="@item.ID">Editovat</a>*@
+                @Html.ActionLink("Editovat", "Edit", new {  id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.ID  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
