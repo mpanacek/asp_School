@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Admin\ApplicationServices\Products\" />
+    <Folder Include="Admin\Configuration\" />
+    <Folder Include="Admin\ViewModels\Products\" />
+    <Folder Include="Client\ApplicationServices\Products\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\web1.Domain\web1.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

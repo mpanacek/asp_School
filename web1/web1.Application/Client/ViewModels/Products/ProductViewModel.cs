@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace web1.Areas.Admin.ViewModels.Products
+namespace web1.Application.Client.ViewModels.Products
 {
-    public class ProductViewModel 
+    public class ProductViewModel// : web1.ViewModels.Products.ProductViewModel
     {
         public int ID { get; set; }
         public string Name { get; set; }
